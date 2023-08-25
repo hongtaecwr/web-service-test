@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "9545b01d-5e05-4a63-a5cf-9aead1d21f8e",
+		"name": "Test E-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4093170"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"user02\",\n    \"password\": \"user02\",\n    \"first_name\": \"User\",\n    \"last_name\": \"02\",\n    \"email\": \"user02@mail.com\",\n    \"tel_no\": \"0822222222\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"user02\",\n    \"password\": \"user02\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3LCJ1c2VyX25hbWUiOiJVc2VyIDAyIiwicGVybWlzc2lvbiI6MSwiZXhwIjoxNjkyOTc4NDA5LCJpYXQiOjE2OTI5MzUyMDl9.B743ydFpf72hoS1a76f1W3gO8k1VTbBSyDfoEZYeXYNd33mSp33hNyiSLhG86VzoZNxH44LkwzjLcvHfJZYUHETY4Swm_sljtGigOXv7hgNiZvEaxIbMzJHMx6PXU87D70AgqyKyj2dE7U9pq4zqRKkrEuFXq6YCCfPQmSsrejH5PSHHpWY5VNKBizkdzG_o3pQb0LH5GDyryxS3VvGOB1Ed3J9RGs6HuuieMtQpg7SeEHvRWH_s0BGBWqYVxyZ9KbcmY-8K4Kql78Q1Kij8tYv1KSvSfjnfKamh2IdqxP2VAeKiGhIoXxVTcrx6p1wOQOoRXK8YFRsscXeGmsetdA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/user/detail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User order histories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3LCJ1c2VyX25hbWUiOiJVc2VyIDAyIiwicGVybWlzc2lvbiI6MSwiZXhwIjoxNjkyOTc4NDA5LCJpYXQiOjE2OTI5MzUyMDl9.B743ydFpf72hoS1a76f1W3gO8k1VTbBSyDfoEZYeXYNd33mSp33hNyiSLhG86VzoZNxH44LkwzjLcvHfJZYUHETY4Swm_sljtGigOXv7hgNiZvEaxIbMzJHMx6PXU87D70AgqyKyj2dE7U9pq4zqRKkrEuFXq6YCCfPQmSsrejH5PSHHpWY5VNKBizkdzG_o3pQb0LH5GDyryxS3VvGOB1Ed3J9RGs6HuuieMtQpg7SeEHvRWH_s0BGBWqYVxyZ9KbcmY-8K4Kql78Q1Kij8tYv1KSvSfjnfKamh2IdqxP2VAeKiGhIoXxVTcrx6p1wOQOoRXK8YFRsscXeGmsetdA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/user/order-histories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"order-histories"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Create order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": [\n        29\n        \n    ],\n    \"address_id\": 2,\n    \"summary_price\": 200\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/order/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"order",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/order/cancel?id=22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"order",
+								"cancel"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/order/detail?id=13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"order",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3LCJ1c2VyX25hbWUiOiJVc2VyIDAyIiwicGVybWlzc2lvbiI6MSwiZXhwIjoxNjkyOTc4NDA5LCJpYXQiOjE2OTI5MzUyMDl9.B743ydFpf72hoS1a76f1W3gO8k1VTbBSyDfoEZYeXYNd33mSp33hNyiSLhG86VzoZNxH44LkwzjLcvHfJZYUHETY4Swm_sljtGigOXv7hgNiZvEaxIbMzJHMx6PXU87D70AgqyKyj2dE7U9pq4zqRKkrEuFXq6YCCfPQmSsrejH5PSHHpWY5VNKBizkdzG_o3pQb0LH5GDyryxS3VvGOB1Ed3J9RGs6HuuieMtQpg7SeEHvRWH_s0BGBWqYVxyZ9KbcmY-8K4Kql78Q1Kij8tYv1KSvSfjnfKamh2IdqxP2VAeKiGhIoXxVTcrx6p1wOQOoRXK8YFRsscXeGmsetdA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/product/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/product/detail?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

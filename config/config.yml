@@ -1,0 +1,9 @@
+database:
+  user: root
+  password: h5toLjsBrS
+  net: tcp
+  addr:  localhost
+  dbname: e-commerce
+
+server:
+  address: 3001
